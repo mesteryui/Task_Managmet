@@ -5,7 +5,11 @@ public class Task {
     String task;
 
     public Task(String state,String task) {
-        this.state = this.state.valueOf(state.toUpperCase());
+        this.state = State.valueOf(state.toUpperCase());
         this.task = task;
+    }
+    public String changeState(String newState) {
+        this.state = State.valueOf(newState.toUpperCase());
+        return state.toString();
     }
 }
