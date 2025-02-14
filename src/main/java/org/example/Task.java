@@ -12,9 +12,11 @@ public class Task {
     public State getState() {
         return state;
     }
-
-    public void setState(State state) {
-        this.state = state;
+    public String toString() {
+        return state + " " + task;
+    }
+    public void setState(String state) {
+        this.state = State.valueOf(state.toUpperCase());
     }
 
     public String getTask() {
@@ -31,11 +33,17 @@ public class Task {
      * @param task the task itself
      */
     public Task(String state,String task) {
-        this.state = State.valueOf(state.toUpperCase());
+        setState(state);
         this.task = task;
     }
+
+    /**
+     * Set state
+     * @param newState the new state
+     * @return
+     */
     public String changeState(String newState) {
-        this.state = State.valueOf(newState.toUpperCase());
+        setState(newState);
         return state.toString();
     }
 }
