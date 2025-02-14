@@ -6,8 +6,24 @@ package org.example;
  * @version 1.0
  */
 public class Task {
-    State state;
-    String task;
+    private State state;
+    private String task;
+
+    public State getState() {
+        return state;
+    }
+
+    public void setState(State state) {
+        this.state = state;
+    }
+
+    public String getTask() {
+        return task;
+    }
+
+    public void setTask(String task) {
+        this.task = task;
+    }
 
     /**
      * Creation of a task
