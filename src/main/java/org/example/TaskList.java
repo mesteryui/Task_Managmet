@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class TaskList {
     ArrayList<Task> tasks;
@@ -11,6 +12,9 @@ public class TaskList {
     }
     public TaskList(ArrayList<Task> tasks) {
         this.tasks = tasks;
+    }
+    public TaskList(Task...tasks) {
+        this.tasks = new ArrayList<>(List.of(tasks));
     }
     public void showFilteringTasks(State state) {
         for (Task task : tasks) {
