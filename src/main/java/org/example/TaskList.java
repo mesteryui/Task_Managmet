@@ -6,8 +6,10 @@ import java.util.List;
 public class TaskList {
     ArrayList<Task> tasks;
     public void showAllTasks() {
+        int contador=0;
         for (Task task : tasks) {
-            System.out.println(task);
+            contador++;
+            System.out.println(contador + "." + " " +task);
         }
     }
     public TaskList(ArrayList<Task> tasks) {
@@ -17,12 +19,15 @@ public class TaskList {
         this.tasks = new ArrayList<>(List.of(tasks));
     }
     public void showFilteringTasks(State state) {
+        int contador=0;
         for (Task task : tasks) {
             if (task.getState() == state) {
-                System.out.println(task);
+                contador++;
+                System.out.println(contador + "." + " " +task);
             }
         }
     }
+
     public TaskList() {
         tasks = new ArrayList<>();
     }
@@ -32,7 +37,12 @@ public class TaskList {
     public String ScanTasks() {
         return "";
     }
-    public void deleteTask(Task task) {
-        tasks.remove(task);
+
+    /**
+     * Delete the tasks in the TaskList
+     * @param taskNumber the tasknumber
+     */
+    public void deleteTask(int taskNumber) {
+        tasks.remove(tasks.get(taskNumber-1));
     }
 }
