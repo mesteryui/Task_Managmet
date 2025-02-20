@@ -38,9 +38,9 @@ public class Task {
     }
 
     /**
-     * Set state
+     * Change the state of a task
      * @param newState the new state
-     * @return
+     * @return the new state
      */
     public String changeState(String newState) {
         setState(newState);
