@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class TaskList {
     ArrayList<Task> tasks;
-    public void mostrarTareas() {
+    public void showAllTasks() {
         for (Task task : tasks) {
             System.out.println(task);
         }
@@ -28,7 +28,7 @@ public class TaskList {
     public String ScanTasks() {
         return "";
     }
-    public boolean deleteTask() {
-        return false;
+    public void deleteTask(Task task) {
+        tasks.remove(task);
     }
 }

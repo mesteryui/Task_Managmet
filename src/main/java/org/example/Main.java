@@ -9,11 +9,14 @@ public class Main {
     public static void main(String[] args) {
         Task task1 = new Task("todo","ajfalf");
         Task task2 = new Task("next","ajfalf");
-        Task[] tasks = {task1,task2};
+        Task task3 = new Task("next","alfjd");
+        Task task4 = new Task("done","alfjd");
+        task3.changeState("done");
+        Task[] tasks = {task1,task2,task3,task4};
         TaskList taskList = new TaskList();
         for (Task task : tasks) {
             taskList.addTasks(task);
         }
-        taskList.mostrarTareas();
+        taskList.showFilteringTasks(State.DONE);
     }
 }
