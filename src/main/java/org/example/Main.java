@@ -12,11 +12,7 @@ public class Main {
         Task task3 = new Task("next","alfjd");
         Task task4 = new Task("done","alfjd");
         task3.changeState("done");
-        Task[] tasks = {task1,task2,task3,task4};
-        TaskList taskList = new TaskList();
-        for (Task task : tasks) {
-            taskList.addTasks(task);
-        }
-        taskList.showFilteringTasks(State.DONE);
+        TaskList taskList = new TaskList(task1,task2,task3,task4);
+        taskList.showAllTasks();
     }
 }
