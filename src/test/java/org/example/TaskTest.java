@@ -19,9 +19,9 @@ class TaskTest {
         assertEquals("DONE",task1.changeState("done"));
     }
     @Test
-    @DisplayName("Cambiar a NEX")
+    @DisplayName("Cambiar a TODO")
     void changeState2() {
-        assertEquals("DONE",task1.changeState("nex"));
+        assertEquals("TODO",task1.changeState("todo"));
     }
 
 }
