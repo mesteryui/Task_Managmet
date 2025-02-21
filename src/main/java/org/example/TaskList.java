@@ -42,4 +42,7 @@ public class TaskList {
     public void deleteTask(int taskNumber) {
         tasks.remove(tasks.get(taskNumber-1));
     }
+    public void setTaskStatus(String status,int index) {
+        tasks.get(index).setState(status);
+    }
 }
