@@ -6,10 +6,8 @@ import java.util.List;
 public class TaskList {
     ArrayList<Task> tasks;
     public void showAllTasks() {
-        int contador=0;
-        for (Task task : tasks) {
-            contador++;
-            System.out.println(contador + "." + " " +task);
+        for (int i = 0;i<tasks.size();i++) {
+            System.out.println(i+1 + " " + tasks);
         }
     }
     public TaskList(ArrayList<Task> tasks) {
