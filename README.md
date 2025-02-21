@@ -50,4 +50,4 @@ Feel free to submit issues and pull requests.
 
 ## License
 
-
+[GPL 3.0](LICENSE)
