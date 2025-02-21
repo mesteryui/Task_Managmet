@@ -1,7 +1,9 @@
-# Project Name
+# Task Managment
 
 ## Description
-A brief description of your Java application, its purpose, and its key features.
+This is a small task managment system based in GTD the main objective is to create a little program that can do that
+to do more easy for me and because is more useful to reuse the code my main objective is to create one or two small classes
+that can be used to task Managment
 
 ## Technologies Used
 - **Java**
@@ -44,7 +46,10 @@ To execute unit tests with JUnit 5.8.1, run:
 │── settings.gradle
 │── README.md
 ```
-
+## Objectives
+This is a list of objectives that I want to achieve to do something that can be useful
+- [ ] Scan the tasks for TaskList from a file with Tasks, specially something with structure as an XML or JSON.
+- [ ] Save the tasks in the file when the program closes and if the file isn't exists create it.
 ## Contributing
 Feel free to submit issues and pull requests.
 
