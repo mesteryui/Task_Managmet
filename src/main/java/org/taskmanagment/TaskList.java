@@ -1,4 +1,4 @@
-package org.example;
+package org.taskmanagment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,10 +31,12 @@ public class TaskList {
     public void addTasks(Task task) {
         tasks.add(task);
     }
-    public ArrayList<Task> ScanTasks() {
+    public ArrayList<Task> scanTasks() {
        return new ArrayList<>();
     }
+    public void saveTasks() {
 
+    }
     /**
      * Delete the tasks in the TaskList
      * @param taskNumber the tasknumber

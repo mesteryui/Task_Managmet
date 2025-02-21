@@ -1,4 +1,4 @@
-package org.example;
+package org.taskmanagment;
 
 /**
  * Definition of a task with its state and the name of task
