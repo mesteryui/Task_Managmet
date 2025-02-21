@@ -1,4 +1,4 @@
-package org.example;
+package org.taskmanagment;
 
 /**
  * Enumerator to control that the state of tasks must be the predefinied

@@ -1,4 +1,8 @@
-package org.taskmanagment;
+package org.main;
+
+import org.taskmanagment.State;
+import org.taskmanagment.Task;
+import org.taskmanagment.TaskList;
 
 import java.util.Scanner;
 
