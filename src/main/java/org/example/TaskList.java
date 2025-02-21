@@ -31,8 +31,8 @@ public class TaskList {
     public void addTasks(Task task) {
         tasks.add(task);
     }
-    public String ScanTasks() {
-        return "";
+    public ArrayList<Task> ScanTasks() {
+       return new ArrayList<>();
     }
 
     /**
