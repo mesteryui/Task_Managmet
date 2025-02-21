@@ -7,7 +7,7 @@ public class TaskList {
     ArrayList<Task> tasks;
     public void showAllTasks() {
         for (int i = 0;i<tasks.size();i++) {
-            System.out.println(i+1 + " " + tasks);
+            System.out.println(i+1 + "." + tasks.get(i));
         }
     }
     public TaskList(ArrayList<Task> tasks) {
@@ -17,11 +17,10 @@ public class TaskList {
         this.tasks = new ArrayList<>(List.of(tasks));
     }
     public void showFilteringTasks(State state) {
-        int contador=0;
-        for (Task task : tasks) {
-            if (task.getState() == state) {
-                contador++;
-                System.out.println(contador + "." + " " +task);
+        for (int i = 0;i<tasks.size();i++) {
+            if (tasks.get(i).getState() == state) {
+
+                System.out.println(i+1 + "." + " " +tasks.get(i));
             }
         }
     }
