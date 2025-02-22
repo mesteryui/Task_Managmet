@@ -40,3 +40,11 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+## Adding gradle things I don't want
+gradlew
+gradlew.bat
+/gradle/wrapper/gradle-wrapper.properties
+/.idea/vcs.xml
+/.idea/misc.xml
+/gradle/wrapper/gradle-wrapper.jar
