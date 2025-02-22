@@ -40,3 +40,7 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+## Adding gradle things I don't want
+gradlew
+gradlew.bat
