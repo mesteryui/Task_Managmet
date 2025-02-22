@@ -16,10 +16,9 @@ public class TaskList {
     public TaskList(Task...tasks) {
         this.tasks = new ArrayList<>(List.of(tasks));
     }
-    public void showFilteringTasks(State state) {
+    public void showFilteringTasks(String state) {
         for (int i = 0;i<tasks.size();i++) {
-            if (tasks.get(i).getState() == state) {
-
+            if (tasks.get(i).getState() == State.valueOf(state.toUpperCase())) {
                 System.out.println(i+1 + "." + " " +tasks.get(i));
             }
         }
