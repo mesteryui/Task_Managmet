@@ -2,7 +2,11 @@ package org.taskmanagment;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * List of tasks that can be recorded in a file or obtanied from a file
+ * @author Oscar (username:Mester)
+ * @version 1.0
+ * **/
 public class TaskList {
     ArrayList<Task> tasks;
     public void showAllTasks() {
