@@ -1,6 +1,5 @@
 package org.main;
 
-import org.taskmanagment.State;
 import org.taskmanagment.Task;
 import org.taskmanagment.TaskList;
 
@@ -30,7 +29,7 @@ public class Main {
                 case 3:
                     System.out.println("Introduca el estado por el que quiere filtrar");
                     String stado = sc.next();
-                    taskList.showFilteringTasks(State.valueOf(stado.toUpperCase()));
+                    taskList.showFilteringTasks(stado);
             }
 
 

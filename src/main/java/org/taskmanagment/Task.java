@@ -2,7 +2,7 @@ package org.taskmanagment;
 
 /**
  * Definition of a task with its state and the name of task
- * @author Oscar Rodriguez
+ * @author Oscar (username:Mester)
  * @version 1.0
  */
 public class Task {

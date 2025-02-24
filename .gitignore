@@ -44,7 +44,7 @@ bin/
 ## Adding gradle things I don't want
 gradlew
 gradlew.bat
-.idea/.name
-.idea/misc.xml
+gradle/wrapper/gradle-wrapper.properties
 .idea/vcs.xml
-gradle
+.idea/misc.xml
+gradle/wrapper/gradle-wrapper.jar
