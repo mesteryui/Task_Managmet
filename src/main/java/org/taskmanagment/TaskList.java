@@ -2,7 +2,6 @@ package org.taskmanagment;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * List of tasks that can be recorded in a file or obtanied from a file
