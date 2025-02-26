@@ -2,6 +2,8 @@ package org.taskmanagment;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
+
 /**
  * List of tasks that can be recorded in a file or obtanied from a file
  * @author Oscar (username:Mester)
@@ -33,8 +35,9 @@ public class TaskList {
     public TaskList() {
         tasks = new ArrayList<>();
     }
-    public void addTasks(Task task) {
+    public String addTasks(Task task) {
         tasks.add(task);
+        return task.getTask();
     }
     public ArrayList<Task> scanTasks() {
        return new ArrayList<>();
@@ -46,8 +49,10 @@ public class TaskList {
      * Delete the tasks in the TaskList
      * @param taskNumber the tasknumber
      */
-    public void deleteTask(int taskNumber) {
+    public String deleteTask(int taskNumber) {
+        String result = tasks.get(taskNumber-1).getTask();
         tasks.remove(tasks.get(taskNumber-1));
+        return result;
     }
     public void setTaskStatus(String status,int index) {
         tasks.get(index).setState(status);

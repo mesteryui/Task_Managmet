@@ -4,8 +4,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.CsvSource;
 
-    public class TaskListTest {
+public class TaskListTest {
 
         private TaskList taskList;
 
@@ -13,10 +14,10 @@ import org.junit.jupiter.params.provider.CsvFileSource;
         public void setUp() {
             // Se inicializa la lista y se agregan 4 tareas con estado "todo"
             taskList = new TaskList();
-            taskList.addTasks(new Task("todo", "Tarea 1"));
-            taskList.addTasks(new Task("todo", "Tarea 2"));
-            taskList.addTasks(new Task("todo", "Tarea 3"));
-            taskList.addTask(new Task("todo", "Tarea 4"));
+            taskList.addTasks(new Task("todo", "Task 1"));
+            taskList.addTasks(new Task("todo", "Task 2"));
+            taskList.addTasks(new Task("todo", "Task 3"));
+            taskList.addTasks(new Task("todo", "Task 4"));
         }
 
         /**
@@ -39,11 +40,13 @@ import org.junit.jupiter.params.provider.CsvFileSource;
          *     ["Tarea 1", "Tarea 2", "Tarea 4"], retornando "Tarea 4".
          */
         @ParameterizedTest
-        @CsvFileSource(resources = "/deleteTaskData.csv", numLinesToSkip = 1)
+        @CsvSource({
+                "1,Task 1",
+                "2,Task 2",
+                "3,Task 3"
+        })
         public void testDeleteTask(int taskNumber, String expectedTask) {
             String result = taskList.deleteTask(taskNumber);
             assertEquals(expectedTask, result);
         }
     }
-
-}
