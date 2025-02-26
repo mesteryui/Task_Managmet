@@ -20,25 +20,31 @@ public class TaskListTest {
             taskList.addTasks(new Task("todo", "Task 4"));
         }
 
-        /**
-         * Test parametrizado que utiliza datos de un archivo CSV.
-         *
-         * Se espera que, al eliminar la tarea en la posición indicada (taskNumber),
-         * se elimine el elemento y se retorne el valor de la tarea que queda en esa posición.
-         *
-         * Ejemplos:
-         * - Si taskNumber es 1:
-         *     Se elimina "Tarea 1" (índice 0) y la lista queda:
-         *     ["Tarea 2", "Tarea 3", "Tarea 4"], retornando "Tarea 2".
-         *
-         * - Si taskNumber es 2:
-         *     Se elimina "Tarea 2" (índice 1) y la lista queda:
-         *     ["Tarea 1", "Tarea 3", "Tarea 4"], retornando "Tarea 3".
-         *
-         * - Si taskNumber es 3:
-         *     Se elimina "Tarea 3" (índice 2) y la lista queda:
-         *     ["Tarea 1", "Tarea 2", "Tarea 4"], retornando "Tarea 4".
-         */
+    /**
+
+     Parameterized test that uses data from a CSV file.
+     It is expected that, when deleting the task at the indicated position (taskNumber),
+     the element is removed and the value of the task that remains at that position is returned.
+     Examples:
+     If taskNumber is 1:
+
+     "Task 1" is removed (index 0) and the list becomes:
+
+     ["Task 2", "Task 3", "Task 4"], returning "Task 2".
+
+     If taskNumber is 2:
+
+     "Task 2" is removed (index 1) and the list becomes:
+
+     ["Task 1", "Task 3", "Task 4"], returning "Task 3".
+
+     If taskNumber is 3:
+
+     "Task 3" is removed (index 2) and the list becomes:
+
+     ["Task 1", "Task 2", "Task 4"], returning "Task 4".
+
+     */
         @ParameterizedTest
         @CsvSource({
                 "1,Task 1",
