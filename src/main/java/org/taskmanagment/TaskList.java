@@ -20,12 +20,14 @@ public class TaskList {
     public TaskList(Task...tasks) {
         this.tasks = new ArrayList<>(List.of(tasks));
     }
-    public void showFilteringTasks(String state) {
+    public String showFilteringTasks(String state) {
+        String finalD="";
         for (int i = 0;i<tasks.size();i++) {
             if (tasks.get(i).getState() == State.valueOf(state.toUpperCase())) {
-                System.out.println(i+1 + "." + " " +tasks.get(i));
+                finalD += i+1 + "." + " " +tasks.get(i);
             }
         }
+        return finalD;
     }
 
     public TaskList() {
