@@ -2,26 +2,21 @@ package org.taskmanagment;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class TaskTest {
     Task task1 = new Task("todo","Hacer huevos");
-
-    @Test
-    @DisplayName("Cambiar a NEXT")
-    void changeState() {
-        assertEquals("NEXT",task1.changeState("NEXT"));
-    }
-    @Test
-    @DisplayName("Cambiar a DONE")
-    void changeState1() {
-        assertEquals("DONE",task1.changeState("done"));
-    }
-    @Test
-    @DisplayName("Cambiar a TODO")
-    void changeState2() {
-        assertEquals("TODO",task1.changeState("todo"));
+    @ParameterizedTest(name="Changes to {0}")
+    @CsvSource({
+            "NEXT,NEXT",
+            "DONE,DONE",
+            "TODO,TODO",
+            "NexT,NEXT","tODo,TODO","DonE,DONE"})
+    void changeState(String state,String expected) {
+        assertEquals(expected,task1.changeState(state));
     }
 
 }
