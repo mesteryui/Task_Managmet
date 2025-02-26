@@ -29,7 +29,7 @@ public class Main {
                 case 3:
                     System.out.println("Introduca el estado por el que quiere filtrar");
                     String stado = sc.next();
-                    taskList.showFilteringTasks(stado);
+                    System.out.println(taskList.showFilteringTasks(stado));
             }
 
 

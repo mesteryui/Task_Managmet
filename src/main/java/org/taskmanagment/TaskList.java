@@ -24,7 +24,7 @@ public class TaskList {
         String finalD="";
         for (int i = 0;i<tasks.size();i++) {
             if (tasks.get(i).getState() == State.valueOf(state.toUpperCase())) {
-                finalD += i+1 + "." + " " +tasks.get(i);
+                finalD += i+1 + "." +tasks.get(i);
             }
         }
         return finalD;
