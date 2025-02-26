@@ -22,7 +22,7 @@ public class TaskListTest {
 
     /**
 
-     Parameterized test that uses data from a CSV file.
+     Parameterized test that uses data in a CSV format.
      It is expected that, when deleting the task at the indicated position (taskNumber),
      the element is removed and the value of the task that remains at that position is returned.
      Examples:
