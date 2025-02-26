@@ -24,7 +24,7 @@ public class Main {
                     taskList.addTasks(new Task(estado,tarea));
                     break;
                 case 2:
-                    taskList.showAllTasks();
+                    System.out.println(taskList.showAllTasks());
                     break;
                 case 3:
                     System.out.println("Introduca el estado por el que quiere filtrar");

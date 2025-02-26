@@ -11,10 +11,12 @@ import java.util.Scanner;
  * **/
 public class TaskList {
     ArrayList<Task> tasks;
-    public void showAllTasks() {
+    public String showAllTasks() {
+        String acabado="";
         for (int i = 0;i<tasks.size();i++) {
-            System.out.println(i+1 + "." + tasks.get(i));
+            acabado += i+1 + "." + tasks.get(i)+"\n";
         }
+        return acabado;
     }
     public TaskList(ArrayList<Task> tasks) {
         this.tasks = tasks;
@@ -26,7 +28,7 @@ public class TaskList {
         String finalD="";
         for (int i = 0;i<tasks.size();i++) {
             if (tasks.get(i).getState() == State.valueOf(state.toUpperCase())) {
-                finalD += i+1 + "." +tasks.get(i);
+                finalD += i+1 + "." +tasks.get(i)+"\n";
             }
         }
         return finalD;
