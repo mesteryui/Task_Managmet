@@ -10,17 +10,17 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         TaskList taskList = new TaskList();
-        int opcion;
+        int option;
         do {
             System.out.println("1.Insert Task\n2.View existing tasks\n3.Filtering Tasks\n4.Exit");
-            opcion = sc.nextInt();
-            switch (opcion) {
+            option = sc.nextInt();
+            switch (option) {
                 case 1:
                     System.out.println("Insert the state of Task:");
-                    String estado = sc.next();
+                    String state = sc.next();
                     System.out.println("Insert the task:");
-                    String tarea = sc.next();
-                    taskList.addTasks(new Task(estado,tarea));
+                    String task = sc.next();
+                    taskList.addTasks(new Task(state,task));
                     break;
                 case 2:
                     System.out.println(taskList.showAllTasks());
@@ -33,7 +33,7 @@ public class Main {
             }
 
 
-        } while (opcion!=4);
+        } while (option!=4);
         sc.close();
     }
 }
