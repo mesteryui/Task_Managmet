@@ -5,35 +5,35 @@ import org.taskmanagment.TaskList;
 
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         TaskList taskList = new TaskList();
-        int opcion;
+        int option;
         do {
-            System.out.println("1.Introducir tarea\n2.Ver tareas existentes\n3.Tareas por filtro\n4.Salir");
-            opcion = sc.nextInt();
-            switch (opcion) {
+            System.out.println("1.Insert Task\n2.View existing tasks\n3.Filtering Tasks\n4.Exit");
+            option = sc.nextInt();
+            switch (option) {
                 case 1:
-                    System.out.println("Introduzca estado de la tarea:");
-                    String estado = sc.next();
-                    System.out.println("Introduzca la tarea:");
-                    String tarea = sc.next();
-                    taskList.addTasks(new Task(estado,tarea));
+                    System.out.println("Insert the state of Task:");
+                    String state = sc.next();
+                    System.out.println("Insert the task:");
+                    String task = sc.next();
+                    taskList.addTasks(new Task(state,task));
                     break;
                 case 2:
                     System.out.println(taskList.showAllTasks());
                     break;
                 case 3:
-                    System.out.println("Introduca el estado por el que quiere filtrar");
+                    System.out.println("Insert the state to filter:");
                     String stado = sc.next();
                     System.out.println(taskList.showFilteringTasks(stado));
+                    break;
             }
 
 
-        } while (opcion!=4);
+        } while (option!=4);
         sc.close();
     }
 }
