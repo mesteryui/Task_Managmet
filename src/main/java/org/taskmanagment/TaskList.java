@@ -13,8 +13,7 @@ public class TaskList {
     public String showAllTasks() {
         String acabado="";
         for (int i = 0;i<tasks.size();i++) {
-            if (i<tasks.size()-1) acabado += i+1 + "." + tasks.get(i);
-            else acabado += i+1 + "." + tasks.get(i)+"\n";
+             acabado += i+1 + "." + tasks.get(i)+"\n";
         }
         return acabado;
     }
