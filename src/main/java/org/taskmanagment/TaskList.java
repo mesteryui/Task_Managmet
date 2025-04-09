@@ -1,5 +1,6 @@
 package org.taskmanagment;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,17 +35,23 @@ public class TaskList {
     }
 
     public TaskList() {
-        tasks = new ArrayList<>();
+        tasks = scanTasks();
     }
     public String addTasks(Task task) {
         tasks.add(task);
         return task.getTask();
     }
     public ArrayList<Task> scanTasks() {
-       return new ArrayList<>();
+        return new ArrayList<>();
     }
     public void saveTasks() {
-
+        ObjectOutputStream objectOutputStream = null;
+        try {
+            objectOutputStream = new ObjectOutputStream(new FileOutputStream(".tasks"));
+            objectOutputStream.writeObject(tasks);
+        } catch (IOException e) {
+            System.out.println();
+        }
     }
     /**
      * Delete the tasks in the TaskList

@@ -13,7 +13,7 @@ public class Main {
 		TaskList taskList = new TaskList();
 		int option;
 		do {
-			System.out.println("1.Insert Task\n2.View existing tasks\n3.Filtering Tasks\n4.Exit");
+			System.out.println("1.Insert Task\n2.View existing tasks\n3.Filtering Tasks\n4.Save Tasks\n5.Exit");
 			option = Integer.parseInt(reader.readLine());
 			switch (option) {
 				case 1:
@@ -31,8 +31,11 @@ public class Main {
 					String stado = reader.readLine();
 					System.out.println(taskList.showFilteringTasks(stado));
 					break;
+				case 4:
+					System.out.println("Saving tasks...");
+					taskList.saveTasks();
 			}
 
-		} while (option != 4);
+		} while (option != 5);
 	}
 }
