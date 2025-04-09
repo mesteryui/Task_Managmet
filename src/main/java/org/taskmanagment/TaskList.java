@@ -42,7 +42,24 @@ public class TaskList {
         return task.getTask();
     }
     public ArrayList<Task> scanTasks() {
-        return new ArrayList<>();
+        ObjectInputStream objectInputStream = null;
+        try {
+            objectInputStream = new ObjectInputStream(new FileInputStream(".tasks"));
+            return (ArrayList<Task>) objectInputStream.readObject();
+        } catch (IOException e) {
+            System.out.println("There aren't files");
+        } catch (ClassNotFoundException e) {
+            System.out.println("The class doesn't exist");
+        } finally {
+            if (objectInputStream!=null) {
+                try {
+                    objectInputStream.close();
+                } catch (IOException e) {
+                    System.out.println("The file can't close "+ e.getMessage());
+                }
+            }
+        }
+        return new ArrayList<Task>();
     }
     public void saveTasks() {
         ObjectOutputStream objectOutputStream = null;
@@ -50,7 +67,15 @@ public class TaskList {
             objectOutputStream = new ObjectOutputStream(new FileOutputStream(".tasks"));
             objectOutputStream.writeObject(tasks);
         } catch (IOException e) {
-            System.out.println();
+            System.out.println("There aren't files");
+        } finally {
+            if (objectOutputStream!=null) {
+                try {
+                    objectOutputStream.close();
+                } catch (IOException e) {
+                    System.out.println("The file can't close "+ e.getMessage());
+                }
+            }
         }
     }
     /**
