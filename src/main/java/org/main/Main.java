@@ -8,13 +8,14 @@ import org.taskmanagment.Task;
 import org.taskmanagment.TaskList;
 
 public class Main {
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		TaskList taskList = new TaskList();
-		int option;
+		int option = 0;
 		do {
 			System.out.println("1.Insert Task\n2.View existing tasks\n3.Filtering Tasks\n4.Save Tasks\n5.Exit");
-			option = Integer.parseInt(reader.readLine());
+			try {
+				option = Integer.parseInt(reader.readLine());
 			switch (option) {
 				case 1:
 					System.out.println("Insert the state of Task:");
@@ -34,6 +35,9 @@ public class Main {
 				case 4:
 					System.out.println("Saving tasks...");
 					taskList.saveTasks();
+			}
+			} catch (IOException e) {
+				System.err.println("The I/O fail " + e.getMessage());
 			}
 
 		} while (option != 5);

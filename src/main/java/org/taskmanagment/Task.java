@@ -1,11 +1,13 @@
 package org.taskmanagment;
 
+import java.io.Serializable;
+
 /**
  * Definition of a task with its state and the name of task
  * @author Oscar (username:Mester)
  * @version 1.0
  */
-public class Task {
+public class Task implements Serializable {
     private State state;
     private String task;
 

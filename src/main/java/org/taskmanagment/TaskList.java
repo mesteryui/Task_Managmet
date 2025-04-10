@@ -36,6 +36,9 @@ public class TaskList {
 
     public TaskList() {
         tasks = scanTasks();
+        if (tasks==null) {
+            tasks = new ArrayList<>();
+        }
     }
     public String addTasks(Task task) {
         tasks.add(task);
