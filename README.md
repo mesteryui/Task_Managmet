@@ -48,8 +48,8 @@ To execute unit tests with JUnit 5.8.1, run:
 ```
 ## Objectives
 This is a list of objectives that I want to achieve to do something that can be useful
-- [ ] Scan the tasks for TaskList from a file with Tasks, specially something with structure as an XML or JSON.
-- [ ] Save the tasks in the file when the program closes and if the file isn't exists create it.
+- [X] Scan the tasks for TaskList from a file with Tasks, specially something with structure as an XML or JSON.
+- [X] Save the tasks in the file when the program closes and if the file isn't exists create it.
 ## Contributing
 Feel free to submit issues and pull requests.
 
