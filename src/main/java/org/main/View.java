@@ -5,7 +5,6 @@ import org.taskmanagment.TaskList;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class View {
     public void mainMenu(TaskList taskList, Control control) {
