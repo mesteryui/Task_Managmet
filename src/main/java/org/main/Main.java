@@ -13,7 +13,7 @@ public class Main {
 		TaskList taskList = new TaskList();
 		int option = 0;
 		do {
-			System.out.println("1.Insert Task\n2.View existing tasks\n3.Filtering Tasks\n4.Save Tasks\n5.Exit");
+			System.out.println("1.Insert Task\n2.View existing tasks\n3.Filtering Tasks\n4.Exit");
 			try {
 				option = Integer.parseInt(reader.readLine());
 			switch (option) {
@@ -23,6 +23,7 @@ public class Main {
 					System.out.println("Insert the task:");
 					String task = reader.readLine();
 					taskList.addTasks(new Task(state, task));
+					taskList.saveTasks();
 					break;
 				case 2:
 					System.out.println(taskList.showAllTasks());
@@ -31,15 +32,13 @@ public class Main {
 					System.out.println("Insert the state to filter:");
 					String stado = reader.readLine();
 					System.out.println(taskList.showFilteringTasks(stado));
-					break;
-				case 4:
-					System.out.println("Saving tasks...");
 					taskList.saveTasks();
+					break;
 			}
 			} catch (IOException e) {
 				System.err.println("The I/O fail " + e.getMessage());
 			}
 
-		} while (option != 5);
+		} while (option != 4);
 	}
 }

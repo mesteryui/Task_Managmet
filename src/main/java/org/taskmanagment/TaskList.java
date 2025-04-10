@@ -93,4 +93,19 @@ public class TaskList {
     public void setTaskStatus(String status,int index) {
         tasks.get(index).setState(status);
     }
+    public Task obtainTasks(String task) {
+        for (int i = 0; i < tasks.size(); i++) {
+            if (tasks.get(i).getTask().equals(task)) return tasks.get(i);
+        }
+        return null;
+    }
+    public boolean existsTask(String task) {
+        for (int i = 0; i < tasks.size(); i++) {
+            if (tasks.get(i).getTask().equals(task)) return true;
+        }
+        return false;
+    }
+    public boolean existsTask(Task task) {
+        return tasks.contains(task);
+    }
 }
