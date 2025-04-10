@@ -21,6 +21,7 @@ public class Control {
     public void mainProgram() {
         view.mainMenu(taskList,this);
     }
+
     public void insertNewTask() throws IOException {
         System.out.println("Insert the state of Task:");
         String state = reader.readLine();
@@ -29,4 +30,5 @@ public class Control {
         taskList.addTasks(new Task(state, task));
         taskList.saveTasks();
     }
+
 }
