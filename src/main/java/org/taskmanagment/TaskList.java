@@ -10,7 +10,7 @@ import java.util.List;
  * @version 1.0
  * **/
 public class TaskList {
-    ArrayList<Task> tasks;
+    public ArrayList<Task> tasks;
     public String showAllTasks() {
         String acabado="";
         for (int i = 0;i<tasks.size();i++) {
@@ -93,15 +93,15 @@ public class TaskList {
     public void setTaskStatus(String status,int index) {
         tasks.get(index).setState(status);
     }
-    public Task obtainTasks(String task) {
-        for (int i = 0; i < tasks.size(); i++) {
-            if (tasks.get(i).getTask().equals(task)) return tasks.get(i);
+    public Task obtainTask(String task) {
+        for (Task value : tasks) {
+            if (value.getTask().equals(task)) return value;
         }
         return null;
     }
     public boolean existsTask(String task) {
-        for (int i = 0; i < tasks.size(); i++) {
-            if (tasks.get(i).getTask().equals(task)) return true;
+        for (Task value : tasks) {
+            if (value.getTask().equals(task)) return true;
         }
         return false;
     }
