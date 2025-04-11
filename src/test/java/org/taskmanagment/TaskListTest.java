@@ -49,7 +49,7 @@ public class TaskListTest {
                 "1,Task 1",
                 "2,Task 2",
                 "3,Task 3",
-                "4,Task 4"
+                "4,Task 4",
         })
         public void testDeleteTask(int taskNumber, String expectedTask) {
             String result = taskList.deleteTask(taskNumber);

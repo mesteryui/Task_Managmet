@@ -22,10 +22,7 @@ public class View {
                         System.out.println(taskList.showAllTasks());
                         break;
                     case 3:
-                        System.out.println("Insert the state to filter:");
-                        String stado = reader.readLine();
-                        System.out.println(taskList.showFilteringTasks(stado));
-                        taskList.saveTasks();
+                        control.editTaskState();
                         break;
                     case 4:
                         System.out.println("Insert the task to delete:");

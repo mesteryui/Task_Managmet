@@ -22,13 +22,27 @@ public class Control {
         view.mainMenu(taskList,this);
     }
 
-    public void insertNewTask() throws IOException {
-        System.out.println("Insert the state of Task:");
-        String state = reader.readLine();
-        System.out.println("Insert the task:");
-        String task = reader.readLine();
-        taskList.addTasks(new Task(state, task));
+    public void insertNewTask() {
+        try {
+            System.out.println("Insert the state of Task:");
+            String state = reader.readLine();
+            System.out.println("Insert the task:");
+            String task = reader.readLine();
+            taskList.addTasks(new Task(state, task));
+            taskList.saveTasks();
+        } catch (IOException e) {
+            System.err.println("There's an I/O Error " + e.getMessage());
+        }
+    }
+    public void editTaskState() {
+        try {
+        System.out.println("Insert the state to filter:");
+        String stado = reader.readLine();
+        System.out.println(taskList.showFilteringTasks(stado));
         taskList.saveTasks();
+        } catch (IOException e) {
+            System.err.println("There's an I/O fail " + e.getMessage());
+        }
     }
 
 }

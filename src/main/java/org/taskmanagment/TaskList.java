@@ -90,6 +90,15 @@ public class TaskList {
         tasks.remove(tasks.get(taskNumber-1));
         return result;
     }
+    /**
+     * Delete the tasks in the TaskList
+     * @param task the task to delete
+     */
+    public String deleteTask(Task task) {
+        String result = task.getTask();
+        tasks.remove(task);
+        return result;
+    }
     public void setTaskStatus(String status,int index) {
         tasks.get(index).setState(status);
     }
