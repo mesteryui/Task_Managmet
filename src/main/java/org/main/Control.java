@@ -7,6 +7,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * Controller that controls the flow of application
+ * @version 1.0
+ * @author Oscar R.
+ */
 public class Control {
     View view;
     TaskList taskList;
